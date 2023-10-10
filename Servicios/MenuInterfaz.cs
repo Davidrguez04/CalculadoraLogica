@@ -16,8 +16,10 @@ namespace CalculadoraLogica.Entidades
 
         public int mostrarMenu();
 
-        public string opciIgualdad();
+        public void opciIgualdad();
 
-        public string opcDesigualdad();
+        public void opcDesigualdad();
+
+        public string pedirTexto(string texto);
     }
 }

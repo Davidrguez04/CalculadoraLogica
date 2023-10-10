@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,16 +38,13 @@ namespace CalculadoraLogica.Entidades
             return opcion;
         }
 
-        public string opciIgualdad()
+        public void opciIgualdad()
         {
             bool esIgual;
            
-
-            Console.WriteLine("Introduzca la primera expresión: ");
-            string pExpresion=Console.ReadLine();
-
-            Console.WriteLine("Introduzca la segunda expresión: ");
-            string sExpresion = Console.ReadLine();
+            string pExpresion=pedirTexto("Introduzca la primera expresión: ");
+           
+            string sExpresion = pedirTexto("Introduzca la segunda expresión: ");
 
             if(pExpresion==sExpresion)
             {
@@ -58,20 +57,17 @@ namespace CalculadoraLogica.Entidades
 
             Console.WriteLine("Resultado de la igualdad: "+esIgual);
 
-            return pExpresion;
+           
 
         }
 
-        public string opcDesigualdad()
+        public void opcDesigualdad()
         {
             bool esDesigual;
            
+            string ppExpresion = pedirTexto("Introduzca la primera expresión: ");
 
-            Console.WriteLine("Introduzca la primera expresión: ");
-            string ppExpresion = Console.ReadLine();
-
-            Console.WriteLine("Introduzca la segunda expresión: ");
-            string ssExpresion = Console.ReadLine();
+            string ssExpresion = pedirTexto("Introduzca la segunda expresión: ");
 
             if (ppExpresion == ssExpresion)
             {
@@ -84,7 +80,16 @@ namespace CalculadoraLogica.Entidades
 
             Console.WriteLine("Resultado de la igualdad: " + esDesigual);
 
-            return ppExpresion;
+            
+        }
+        public string pedirTexto(string mensaje)
+        {
+            string texto;
+            
+            Console.WriteLine(mensaje);
+            texto = Console.ReadLine();
+
+            return texto;
         }
     }
 }
