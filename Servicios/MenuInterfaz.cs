@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CalculadoraLogica.Entidades
+namespace CalculadoraLogica.Servicios
 {
     /// <summary>
     /// Interfaz que corresponde a la funcionalidad del menú

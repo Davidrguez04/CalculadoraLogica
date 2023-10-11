@@ -1,4 +1,4 @@
-﻿using CalculadoraLogica.Entidades;
+﻿using CalculadoraLogica.Servicios;
 using System;
 
 namespace CalculadoraLogica.Controladores
